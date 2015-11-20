@@ -1,0 +1,2 @@
+# KeyGuardPlugin
+Cordova keyguard plugin
