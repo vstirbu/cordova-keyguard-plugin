@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        id="cordova-keyguard-plugin"
+        version="0.1.0">
+    <engines>
+        <engine name="cordova" version=">=3.0.0" />
+    </engines>
+
+    <name>KeyGuard</name>
+    <description>Keyguard plugin for Cordova/Phonegap</description>
+    <author>Vlad Stirbu</author>
+    <keywords>keyguard</keywords>
+    <license>MIT</license>
+
+    <js-module src="www/keyguard.js" name="keyguard">
+        <clobbers target="navigator" />
+    </js-module>
+
+    <platform name="android">
+
+        <config-file target="AndroidManifest.xml" parent="/manifest">
+            <uses-permission android:name="android.permission.DISABLE_KEYGUARD"/>
+        </config-file>
+
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="KeyGuard">
+                <param name="android-package" value="com.vladstirbu.cordova.KeyGuard" />
+            </feature>
+        </config-file>
+
+        <source-file src="src/android/KeyGuard.java" target-dir="src/com/vladstirbu/cordova" />
+
+    </platform>
+    <info></info>
+</plugin>

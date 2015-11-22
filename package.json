@@ -1,0 +1,24 @@
+{
+  "name": "cordova-keyguard-plugin",
+  "version": "0.1.0",
+  "description": "Cordova keyguard plugin",
+  "main": "index.js",
+  "scripts": {
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vstirbu/KeyGuardPlugin.git"
+  },
+  "keywords": [
+    "cordova:android",
+    "keyguard",
+    "cordova",
+    "plugin"
+  ],
+  "author": "Vlad Stirbu <vstirbu@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vstirbu/KeyGuardPlugin/issues"
+  },
+  "homepage": "https://github.com/vstirbu/KeyGuardPlugin#README.md"
+}
