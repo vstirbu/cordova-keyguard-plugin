@@ -45,7 +45,7 @@ navigator.keyguard = false;
 The plugin emits `keyguard` events whenever the state change has completed. You can reister for this events:
 
 ```javascript
-document.addEventListener('keyguard', function (state) {
+window.addEventListener('keyguard', function (state) {
   // state can be true or false;
 });
 ```
