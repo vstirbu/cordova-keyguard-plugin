@@ -1,4 +1,5 @@
 var exec = require('cordova/exec');
+var channel = require('cordova/channel');
 
 var _enabled = false;
 
@@ -14,8 +15,9 @@ Object.defineProperty(navigator, 'keyguard', {
   }
 });
 
-document.addEventListener('deviceready', function() {
+channel.onCordovaReady.subscribe(function() {
   exec(function (enabled) {
+    console.log(enabled);
     _enabled = enabled;
   }, function (err) {}, 'KeyGuard', 'enabled', []);
 });
